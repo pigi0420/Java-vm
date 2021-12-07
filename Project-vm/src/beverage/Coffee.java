@@ -5,27 +5,29 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class Coffee extends JFrame implements ActionListener{
-	private JButton coffeeButton;    
+	private JButton coffeeBtn;    
 	
 	public void actionPerformed(ActionEvent e) {
 		coffeeNum++;
 	}
 	
 	public Coffee() {
-		this.setTitle("¾È³ç ÀÚÆÇ±â¾ä :D!");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setSize(600, 700);
-		setLayout(null);
-		
 		JPanel pn = new JPanel();
-//		pn.setBackground(getForeground(Color.yellow));
+		this.setTitle("¾È³ç ÀÚÆÇ±â¾ä :D!");
+		this.setSize(600, 700);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		pn.setLayout(null);
+		pn.setBackground(Color.yellow);
+		pn.setOpaque(true);
+		Color bcolor= new Color(255, 250, 210);
+		pn.setBackground(bcolor);
 		
-		coffeeButton = new JButton("Ä¿ÇÇ 500");
-		coffeeButton.setBounds(350, 100, 150, 40);
-		coffeeButton.addActionListener(this);
+		coffeeBtn = new JButton("Ä¿ÇÇ 500¿ø");
+		coffeeBtn.setBackground(Color.pink);
+		coffeeBtn.setBounds(350, 160, 150, 40);
+		coffeeBtn.addActionListener(this);
 		
 		add(pn);
-		pn.add(coffeeButton);
 		setVisible(true);
 		
 	}
