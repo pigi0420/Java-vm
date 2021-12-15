@@ -6,10 +6,10 @@ class Water{
 	private int waterNum;
 
 	public int getwaterNum() { return waterNum; }
-	public void setwaterNum(int waterNum) { this.waterNum = 3; }
+	public void setwaterNum(int waterNum) { this.waterNum = waterNum; }
 
 	public int getwaterPrice() { return waterPrice; }
-	public void setwaterPrice(int waterPrice) { this.waterPrice = 450; }
+	public void setwaterPrice(int waterPrice) { this.waterPrice = waterPrice; }
 
 	
 }

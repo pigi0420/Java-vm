@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Panel extends JFrame {
+public class Panel extends JFrame implements ActionListener{
 	public JButton waterBtn;
 	public JButton coffeeBtn;
 	public JButton sportsDrinkBtn;
@@ -48,13 +48,46 @@ public class Panel extends JFrame {
 		
 		}
 		
+	@Override 
+	public void actionPerformed(ActionEvent event) { 
+		Water w = new Water();
+		Coffee c = new Coffee();
+		SportsDrink sp = new SportsDrink();
+		PCoffee pc = new PCoffee();
+		SoftDrink so = new SoftDrink();
+		
+		if (event.getSource() == waterBtn) { 
+			w.setwaterNum(ABORT);
+		}
+		
+		else if (event.getSource() == coffeeBtn) { 
+			c.coffeeNum--;
+		}
+		
+		else if (event.getSource() == sportsDrinkBtn) { 
+			sp.sportsDrinkNum--;
+		}
+		
+		else if (event.getSource() == pCoffeeBtn) { 
+			pc.pCoffeeNum--;
+		}
+		
+		else if (event.getSource() == softDrinkBtn) { 
+			so.softDrinkNum--;
+		}
+
+	
+	}
 	
 	
 	public static void main(String[] args) {
-		int sum;
-		Panel p = new Panel();
 		Water w = new Water();
-		sum = w.getwaterNum(1);
+		
+		new Panel();
+		
+		System.out.println(w.waterNum);
+	
 	}
+
 
 }
